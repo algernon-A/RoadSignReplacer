@@ -66,8 +66,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Changelog.txt" />
     <Content Include="Code\Configuration\SignPacks.xml" />
-    <Content Include="Code\Images\PreviewImage.png" />
+    <Content Include="Images\PreviewImage.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

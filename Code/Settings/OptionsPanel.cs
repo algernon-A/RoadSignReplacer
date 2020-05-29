@@ -291,8 +291,10 @@ namespace RoadSignReplacer
                 {
                     Debug.Log("Road Sign Replacer: couldn't find configured general sign pack '" + settingsFile.signPackName + "'.");
                 }
-
-                UpdateSelectedSignPack(selectedSignPack);
+                else
+                {
+                    UpdateSelectedSignPack(selectedSignPack);
+                }
             }
 
             // Apply speed sign pack setting, if any.
@@ -304,8 +306,10 @@ namespace RoadSignReplacer
                 {
                     Debug.Log("Road Sign Replacer: couldn't find configured speed sign pack '" + settingsFile.speedPackName + "'.");
                 }
-
-                UpdateSelectedSignPack(selectedSpeedPack);
+                else
+                {
+                    UpdateSelectedSignPack(selectedSpeedPack);
+                }
             }
 
             // Update options panel selection.

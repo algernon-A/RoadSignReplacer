@@ -1,0 +1,1 @@
+﻿- Fix NullreferenceException when selected prop pack is no longer subscribed to
