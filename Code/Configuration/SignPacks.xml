@@ -98,5 +98,18 @@
         <replacement target="No Left Turn Sign" replacement="1685731764.ITA Drive straight or right_Data" rotation="0" />
       </propReplacements>
     </replacementpack>
+    <replacementpack name="German sign pack for Highway/National Road/Road-work-sites and other random signs by UFF">
+      <propReplacements>
+        <replacement target="30 Speed Limit" replacement="1178771213.30km/h Höchstgeschwindigkeit_Data" rotation="0" />
+        <replacement target="40 Speed Limit" replacement="1178771213.50km/h Höchstgeschwindigkeit_Data" rotation="0" />
+        <replacement target="50 Speed Limit" replacement="1178771213.50km/h Höchstgeschwindigkeit_Data" rotation="0" />
+        <replacement target="60 Speed Limit" replacement="1178771213.60km/h Höchstgeschwindigkeit_Data" rotation="0" />
+        <replacement target="100 Speed Limit" replacement="1178771213.120km/h Höchstgeschwindigkeit_Data" rotation="0" />
+        <replacement target="Stop Sign" replacement="1178771213.Halt! Vorfahrt gewähren!_Data" rotation="0" />
+        <replacement target="No Right Turn Sign" replacement="1178771213.Vorgeschriebene Fahrtrichtung GL_Data" rotation="0" />
+        <replacement target="No Left Turn Sign" replacement="1178771213.Vorgeschriebene Fahrtrichtung GR_Data" rotation="0" />
+        <replacement target="Motorway Overroad Signs" replacement="1178771213.AUTOBAHN 3Sp-2G,1R KP_Data" rotation="0" />
+      </propReplacements>
+    </replacementpack>
   </propPacks>
 </RoadSignReplacer>
