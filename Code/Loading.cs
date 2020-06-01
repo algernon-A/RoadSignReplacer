@@ -25,7 +25,7 @@ namespace RoadSignReplacer
                 return;
             }
 
-            UnityEngine.Debug.Log("Road Sign Replacer: version v" + RoadSignMod.Version + " loading.");
+            Debug.Log("Road Sign Replacer: version v" + RoadSignMod.Version + " loading.");
 
             base.OnLevelLoaded(mode);
             _inGame = true;

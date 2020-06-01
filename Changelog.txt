@@ -1,4 +1,5 @@
 ﻿- Fix NullreferenceException when selected prop pack is no longer subscribed to
+- Fix option panel regeneration forcing attempted reapplication of changes
 - Motorway gantries added to officially replacable signs
 - Added support for 'Italy road signs - PACK' by Arnold J. Rimmer, Bsc. Ssc.
 - German sign pack for Highway/National Road/Road-work-sites and other random signs by UFF

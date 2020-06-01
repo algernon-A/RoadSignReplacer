@@ -62,6 +62,7 @@
     <Compile Include="Code\Settings\Selections.cs" />
     <Compile Include="Code\Configuration\ConfigurationFile.cs" />
     <Compile Include="Code\Settings\SettingsFile.cs" />
+    <Compile Include="Code\Settings\SignReplacer.cs" />
     <Compile Include="Code\Settings\XML_Settings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -319,7 +319,9 @@ namespace RoadSignReplacer
             // Perform actual replacement if we're in-game.
             if (Loading.InGame)
             {
-                savePanel.ReplaceRoadProps();
+                Debug.Log("Road Sign Replacer: applying settings.");
+
+                SignReplacer.ReplaceRoadProps(selectedSignPack?.propPack, selectedSpeedPack?.propPack);
             }
         }
     }
