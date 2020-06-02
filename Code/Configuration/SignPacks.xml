@@ -14,6 +14,7 @@
         <replacement target="Stop Sign" replacement="1406118102.UKR-S GW_Data" rotation="0" />
         <replacement target="No Right Turn Sign" replacement="1406118102.UKR-S NR_Data" rotation="0" />
         <replacement target="No Left Turn Sign" replacement="1406118102.UKR-S NL_Data" rotation="0" />
+        <replacement target="No Parking Sign" replacement="1611965517.UKR-S No Stopping_Data" rotation="0" />
         <replacement target="Motorway Sign" replacement="1406118102.UKR-MWS MW Start_Data" rotation="0" />
       </propReplacements>
     </replacementpack>

@@ -1,4 +1,6 @@
-﻿- Fix NullreferenceException when selected prop pack is no longer subscribed to
+﻿Version 0.2
+
+- Fix NullreferenceException when selected prop pack is no longer subscribed to
 - Fix option panel regeneration forcing attempted reapplication of changes
 - Motorway gantries added to officially replacable signs
 - Added support for 'Italy road signs - PACK' by Arnold J. Rimmer, Bsc. Ssc.

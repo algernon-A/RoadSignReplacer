@@ -10,7 +10,7 @@ namespace RoadSignReplacer
     {
         public string Name => "Road Sign Replacer";
 
-        public static string Version => "0.1";
+        public static string Version => "0.2";
 
         public string Description => "Replaces road signs.  UNDER DEVELOPMENT: feedback and suggestions welcome.";
 
