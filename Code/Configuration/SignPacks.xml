@@ -112,5 +112,19 @@
         <replacement target="Motorway Overroad Signs" replacement="1178771213.AUTOBAHN 3Sp-2G,1R KP_Data" rotation="0" />
       </propReplacements>
     </replacementpack>
+    <replacementpack name="French road signs by Raymond Pelletier">
+      <propReplacements>
+        <replacement target="30 Speed Limit" replacement="1073554884.French Road Sign - B14.30_Data" rotation="0" />
+        <replacement target="40 Speed Limit" replacement="1073554884.French Road Sign - B14.50_Data" rotation="0" />
+        <replacement target="50 Speed Limit" replacement="1073554884.French Road Sign - B14.50_Data" rotation="0" />
+        <replacement target="60 Speed Limit" replacement="1073554884.French Road Sign - B14.70_Data" rotation="0" />
+        <replacement target="100 Speed Limit" replacement="1073554884.French Road Sign - B14.110_Data" rotation="0" />
+        <replacement target="Stop Sign" replacement="1003078914.French Road Sign - AB4_Data" rotation="0" />
+        <replacement target="No Parking Sign" replacement="1073554884.French Road Sign - B6b_Data" rotation="0" />
+        <replacement target="No Right Turn Sign" replacement="1073554884.French Road Sign - B2b_Data" rotation="0" />
+        <replacement target="No Left Turn Sign" replacement="1073554884.French Road Sign - B2a_Data" rotation="0" />
+        <replacement target="Motorway Sign" replacement="1074496614.French Road Sign - C207_Data" rotation="0" />
+      </propReplacements>
+    </replacementpack>
   </propPacks>
 </RoadSignReplacer>

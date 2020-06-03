@@ -1,4 +1,7 @@
-﻿Version 0.2
+﻿
+- Added support for French road signs by Raymond Pelletie
+
+Version 0.2
 
 - Fix NullreferenceException when selected prop pack is no longer subscribed to
 - Fix option panel regeneration forcing attempted reapplication of changes
