@@ -2,7 +2,6 @@
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
-using UnityEngine;
 using ICities;
 using ColossalFramework.Plugins;
 
@@ -46,7 +45,7 @@ namespace RoadSignReplacer
                 }
 
                 // If we got here, we didn't find it.
-                Debug.Log("Road Sign Replacer: couldn't find assembly.");
+                Debugging.Message("couldn't find assembly path");
                 throw new DllNotFoundException("Road Sign Replacer assembly not found.");
             }
         }

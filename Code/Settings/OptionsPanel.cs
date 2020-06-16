@@ -53,13 +53,13 @@ namespace RoadSignReplacer
 
             if (configurationFile == null)
             {
-                Debug.Log("Road Sign Replacer: configuration file not found.");
+                Debugging.Message("configuration file not found");
                 return;
             }
 
             if (configurationFile.propPacks == null)
             {
-                Debug.Log("Road Sign Replacer: no valid records found in configuration file.");
+                Debugging.Message("no valid records found in configuration file");
                 return;
             }
 
@@ -110,7 +110,7 @@ namespace RoadSignReplacer
                         {
                             if (PackageManager.GetPackage(workshopPrefix) == null)
                             {
-                                Debug.Log("Road Sign Replacer: workshop subscription " + workshopPrefix + " not found.");
+                                Debugging.Message("workshop subscription " + workshopPrefix + " not found");
                                 continue;
                             }
                         }
@@ -279,8 +279,10 @@ namespace RoadSignReplacer
         /// </summary>
         public void LoadConfiguration()
         {
-            // Load the file.
+            // Load the settings file.
             SettingsFile settingsFile = Configuration<SettingsFile>.Load();
+
+            // Load the network file.
 
             // Apply general sign pack setting, if any.
             if (settingsFile.signPackName != null && settingsFile.signPackName != "Vanilla")
@@ -319,7 +321,7 @@ namespace RoadSignReplacer
             // Perform actual replacement if we're in-game.
             if (Loading.InGame)
             {
-                Debug.Log("Road Sign Replacer: applying settings.");
+                Debugging.Message("applying settings");
 
                 SignReplacer.ReplaceRoadProps(selectedSignPack?.propPack, selectedSpeedPack?.propPack);
             }

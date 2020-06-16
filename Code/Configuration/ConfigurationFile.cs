@@ -34,7 +34,7 @@ namespace RoadSignReplacer
     /// Individual prop replacement data structure.
     /// </summary>
     [XmlType("replacement")]
-    public class PropReplacement
+    public struct PropReplacement
     {
         [XmlAttribute("target")]
         [DefaultValue("")]

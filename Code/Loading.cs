@@ -25,7 +25,7 @@ namespace RoadSignReplacer
                 return;
             }
 
-            Debug.Log("Road Sign Replacer: version v" + RoadSignMod.Version + " loading.");
+            Debugging.Message("version v" + RoadSignMod.Version + " loading");
 
             base.OnLevelLoaded(mode);
             _inGame = true;
@@ -39,7 +39,7 @@ namespace RoadSignReplacer
                 Selections.Setup();
             }
 
-            Debug.Log("Road Sign Replacer finished loading.");
+            Debugging.Message("finished loading");
         }
     }
 }

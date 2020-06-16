@@ -35,21 +35,21 @@ namespace RoadSignReplacer
             // Don't do anything if no selection.
             if (speedSelection == null && signSelection == null)
             {
-                Debug.Log("Road Sign Replacer: no selection.");
+                Debugging.Message("no selection");
                 return;
             }
 
             // Get speed limit prop prefabs, if there's a valid new current selection.
             if (speedSelection != null && !speedSelection.name.Equals(appliedSpeedPack.name))
             {
-                Debug.Log("Road Sign Replacer - replacing speed signs with " + speedSelection.name);
+                Debugging.Message("replacing speed signs with " + speedSelection.name);
                 replacingSpeed = true;
             }
 
             // Get general prop prefabs, if there's a valid new current selection.
             if (signSelection != null && !signSelection.name.Equals(appliedSignPack.name))
             {
-                Debug.Log("Road Sign Replacer - replacing signs with " + signSelection.name);
+                Debugging.Message("replacing signs with " + signSelection.name);
                 replacingSigns = true;
             }
 
@@ -185,7 +185,7 @@ namespace RoadSignReplacer
                     }
                     else
                     {
-                        Debug.Log("Road Sign Replacer: couldn't find replacement for " + prop.name);
+                        Debugging.Message("couldn't find replacement for " + prop.name);
                     }
 
                     // All done here.  Once we've got a match there's no point carrying on looping.
@@ -220,7 +220,7 @@ namespace RoadSignReplacer
                     }
                     else
                     {
-                        Debug.Log("Road Sign Replacer: couldn't revert to original for " + prop.name);
+                        Debugging.Message("couldn't revert to original for " + prop.name);
                     }
 
                     // All done here.  Once we've got a match there's no point carrying on looping.

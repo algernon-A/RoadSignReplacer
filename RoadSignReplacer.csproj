@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\Configuration\ConfigurationUtil.cs" />
+    <Compile Include="Code\Debugging.cs" />
     <Compile Include="Code\GUI\UIFastList.cs" />
     <Compile Include="Code\GUI\UISignPackRow.cs" />
     <Compile Include="Code\GUI\UISavePanel.cs" />
@@ -68,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Changelog.txt" />
+    <Content Include="Networks\Network.xml" />
     <Content Include="Code\Configuration\SignPacks.xml" />
     <Content Include="Images\PreviewImage.png" />
   </ItemGroup>
