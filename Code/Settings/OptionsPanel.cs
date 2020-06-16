@@ -291,7 +291,7 @@ namespace RoadSignReplacer
 
                 if (selectedSignPack == null)
                 {
-                    Debug.Log("Road Sign Replacer: couldn't find configured general sign pack '" + settingsFile.signPackName + "'.");
+                    Debugging.Message("couldn't find configured general sign pack '" + settingsFile.signPackName + "'.");
                 }
                 else
                 {
