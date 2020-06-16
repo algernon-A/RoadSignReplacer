@@ -1,6 +1,9 @@
 ﻿
+Version 0.2.1
+
 - Added support for French road signs by Raymond Pelletie
 - Standardise all logging
+
 
 Version 0.2
 
