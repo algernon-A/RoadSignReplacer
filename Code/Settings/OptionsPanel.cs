@@ -306,7 +306,7 @@ namespace RoadSignReplacer
 
                 if (selectedSpeedPack == null)
                 {
-                    Debug.Log("Road Sign Replacer: couldn't find configured speed sign pack '" + settingsFile.speedPackName + "'.");
+                    Debugging.Message("Road Sign Replacer: couldn't find configured speed sign pack '" + settingsFile.speedPackName + "'.");
                 }
                 else
                 {

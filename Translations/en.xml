@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Language UniqueName="en" ReadableName="English">
+  <Translations>
+    <Translation ID="RSR_DESC" String="Replaces road signs.  UNDER DEVELOPMENT: feedback and suggestions welcome." />
+    <Translation ID="TRN_CHOICE" String="Set language" />
+    <Translation ID="TRN_SYS" String="Use system language" />
+  </Translations>
+</Language>

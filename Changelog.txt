@@ -1,4 +1,7 @@
-﻿
+﻿- Add configurable translation framework
+- Standardise exception logging
+
+
 Version 0.2.1
 
 - Added support for French road signs by Raymond Pelletie

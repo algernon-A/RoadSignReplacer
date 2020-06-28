@@ -8,11 +8,12 @@ namespace RoadSignReplacer
     /// </summary>
     public class RoadSignMod : IUserMod
     {
-        public string Name => "Road Sign Replacer";
+        public static string ModName => "Road Sign Replacer";
 
         public static string Version => "0.2.1";
+        public string Name => ModName + " " + Version;
 
-        public string Description => "Replaces road signs.  UNDER DEVELOPMENT: feedback and suggestions welcome.";
+        public string Description => Translations.Translate("RSR_DESC");
 
 
         /// <summary>
