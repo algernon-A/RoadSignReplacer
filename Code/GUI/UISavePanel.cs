@@ -45,6 +45,9 @@ namespace RoadSignReplacer
             applyButton.eventClick += (control, clickEvent) =>
             {
                 SignReplacer.ReplaceRoadProps(currentSignSelection, currentSpeedSelection);
+                Settings.signPackName = currentSignSelection.name;
+                Settings.speedPackName = currentSpeedSelection.name;
+                SettingsUtils.SaveSettings();
             };
         }
     }

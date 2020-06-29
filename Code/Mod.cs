@@ -21,9 +21,11 @@ namespace RoadSignReplacer
         /// </summary>
         public void OnSettingsUI(UIHelperBase helper)
         {
+            // Load settings file.
+            SettingsUtils.LoadSettings();
+
             // Create options panel.
             OptionsPanel optionsPanel = new OptionsPanel(helper);
         }
-
     }
 }

@@ -34,8 +34,8 @@ namespace RoadSignReplacer
         private UISavePanel savePanel;
 
         // Selected items.
-        private InternalPropPack selectedSpeedPack;
-        private InternalPropPack selectedSignPack;
+        internal InternalPropPack selectedSpeedPack;
+        internal InternalPropPack selectedSignPack;
 
         // Instance reference.
         private static OptionsPanel _instance;
@@ -48,21 +48,6 @@ namespace RoadSignReplacer
         /// <param name="helper">UIHelperBase parent</param>
         public OptionsPanel(UIHelperBase helper)
         {
-            // Load settings.
-            configurationFile = Configuration<ConfigurationFile>.Load(true);
-
-            if (configurationFile == null)
-            {
-                Debugging.Message("configuration file not found");
-                return;
-            }
-
-            if (configurationFile.propPacks == null)
-            {
-                Debugging.Message("no valid records found in configuration file");
-                return;
-            }
-
             // Set instance.
             _instance = this;
 
@@ -70,6 +55,9 @@ namespace RoadSignReplacer
             {
                 Selections.Setup();
             }
+
+            // Load settings.
+            configurationFile = ConfigurationUtil.LoadConfiguration();
 
             // Build lists of packs in relevant selection categories.
             signPacks = new List<InternalPropPack>();
@@ -259,6 +247,7 @@ namespace RoadSignReplacer
             UpdateSelectedSignPack(selectedSignPack);
         }
 
+
         /// <summary>
         /// Generates the list of speed sign packs.
         /// </summary>
@@ -279,19 +268,16 @@ namespace RoadSignReplacer
         /// </summary>
         public void LoadConfiguration()
         {
-            // Load the settings file.
-            SettingsFile settingsFile = Configuration<SettingsFile>.Load();
-
             // Load the network file.
 
             // Apply general sign pack setting, if any.
-            if (settingsFile.signPackName != null && settingsFile.signPackName != "Vanilla")
+            if (Settings.signPackName != null && Settings.signPackName != "Vanilla")
             {
-                selectedSignPack = signPacks.Find(pack => pack.propPack.name.Equals(settingsFile.signPackName));
+                selectedSignPack = signPacks.Find(pack => pack.propPack.name.Equals(Settings.signPackName));
 
                 if (selectedSignPack == null)
                 {
-                    Debugging.Message("couldn't find configured general sign pack '" + settingsFile.signPackName + "'.");
+                    Debugging.Message("couldn't find configured general sign pack '" + Settings.signPackName + "'.");
                 }
                 else
                 {
@@ -300,13 +286,13 @@ namespace RoadSignReplacer
             }
 
             // Apply speed sign pack setting, if any.
-            if (settingsFile.speedPackName != null && settingsFile.speedPackName != "Vanilla")
+            if (Settings.speedPackName != null && Settings.speedPackName != "Vanilla")
             {
-                selectedSpeedPack = speedPacks.Find(pack => pack.propPack.name.Equals(settingsFile.speedPackName));
+                selectedSpeedPack = speedPacks.Find(pack => pack.propPack.name.Equals(Settings.speedPackName));
 
                 if (selectedSpeedPack == null)
                 {
-                    Debugging.Message("Road Sign Replacer: couldn't find configured speed sign pack '" + settingsFile.speedPackName + "'.");
+                    Debugging.Message("Road Sign Replacer: couldn't find configured speed sign pack '" + Settings.speedPackName + "'.");
                 }
                 else
                 {
@@ -317,7 +303,7 @@ namespace RoadSignReplacer
             // Update options panel selection.
             signPackSelection.FindPack(selectedSignPack == null ? "Vanilla" : selectedSignPack.propPack.name);
             speedPackSelection.FindPack(selectedSpeedPack == null ? "Vanilla" : selectedSpeedPack.propPack.name);
-
+            
             // Perform actual replacement if we're in-game.
             if (Loading.InGame)
             {

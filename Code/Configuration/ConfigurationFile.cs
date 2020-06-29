@@ -8,7 +8,6 @@ namespace RoadSignReplacer
     /// <summary>
     /// Configuration file class.
     /// </summary>
-    [ConfigurationPath("SignPacks.xml")]
     [XmlType("RoadSignReplacer")]
     public class ConfigurationFile
     {
