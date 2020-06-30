@@ -1,4 +1,6 @@
-﻿- Add configurable translation framework
+﻿
+- Add support for custom roads, starting with Macwelshman's UK Road Project
+- Add configurable translation framework
 - Overhaul XML file management
 - Standardise exception logging
 

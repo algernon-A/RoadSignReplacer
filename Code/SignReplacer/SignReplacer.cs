@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 
 namespace RoadSignReplacer
@@ -147,14 +148,14 @@ namespace RoadSignReplacer
             // Revert and replace general signs, if we're doing that.
             if (signSelection != null)
             {
-                RevertSign(appliedSignPack, ref prop, lane, ref laneAngle);
+                RevertSign(DataStore.signPacks, ref prop, lane, ref laneAngle);
                 ReplaceSign(signSelection, ref prop, lane, laneAngle);
             }
 
             // Revert and replace speed limit signs, if we're doing that.
             if (speedSelection != null)
             {
-                RevertSign(appliedSpeedPack, ref prop, lane, ref laneAngle);
+                RevertSign(DataStore.speedPacks, ref prop, lane, ref laneAngle);
                 ReplaceSign(speedSelection, ref prop, lane, laneAngle);
             }
         }
@@ -198,33 +199,37 @@ namespace RoadSignReplacer
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="appliedPack">Currently applied prop pack</param>
+        /// <param name="packList">Relevant list of prop packs (e.g. sign or speed)</param>
         /// <param name="prop">Existing prop</param>
         /// <param name="lane">Parent LaneProp</param>
         /// <param name="laneAngle">Existing angle for props in prop lane - modified to remove the offset of the reverted prop</param>
-        private static void RevertSign(PropPack appliedPack, ref PropInfo prop, NetLaneProps.Prop lane, ref float laneAngle)
+        private static void RevertSign(List<InternalPropPack> packList, ref PropInfo prop, NetLaneProps.Prop lane, ref float laneAngle)
         {
-            foreach (PropReplacement propReplacement in appliedPack.propReplacements)
+            // Iterate through each prop in the packlist.
+
+            foreach (InternalPropPack intPropPack in packList)
             {
-                // Iterate through each prop in currently applied prop pack.
-                if (prop.name.Equals(propReplacement.replacementName))
-                {
-                    // Got a name match with this prop; load the new prefab.
-                    PropInfo originalProp = PrefabCollection<PropInfo>.FindLoaded(propReplacement.targetName);
-
-                    if (originalProp != null)
+                foreach (PropReplacement propReplacement in intPropPack.propPack.propReplacements)
                     {
-                        // Replace prop and reset lane angle.
-                        prop = originalProp;
-                        laneAngle -= propReplacement.rotation;
-                    }
-                    else
+                    if (prop.name.Equals(propReplacement.replacementName))
                     {
-                        Debugging.Message("couldn't revert to original for " + prop.name);
-                    }
+                        // Got a name match with this prop; load the new prefab.
+                        PropInfo originalProp = PrefabCollection<PropInfo>.FindLoaded(propReplacement.targetName);
 
-                    // All done here.  Once we've got a match there's no point carrying on looping.
-                    break;
+                        if (originalProp != null)
+                        {
+                            // Replace prop and reset lane angle.
+                            prop = originalProp;
+                            laneAngle -= propReplacement.rotation;
+                        }
+                        else
+                        {
+                            Debugging.Message("couldn't revert to vanilla for " + prop.name);
+                        }
+
+                        // All done here.  Once we've got a match there's no point carrying on looping.
+                        break;
+                    }
                 }
             }
         }
