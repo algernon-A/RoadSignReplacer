@@ -1,4 +1,5 @@
-﻿
+﻿Version 0.3
+
 - Add support for custom roads, starting with Macwelshman's UK Road Project
 - Add configurable translation framework
 - Overhaul XML file management
