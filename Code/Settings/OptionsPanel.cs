@@ -22,12 +22,6 @@ namespace RoadSignReplacer
         public const float headingHeight = 30;
         public const float rowHeight = 30;
 
-
-        // Data objects.
-        public static List<InternalPropPack> speedPacks;
-        public static List<InternalPropPack> signPacks;
-        private static ConfigurationFile configurationFile;
-
         // Panel components.
         private UIFastList speedPackSelection;
         private UIFastList signPackSelection;
@@ -51,88 +45,6 @@ namespace RoadSignReplacer
             // Set instance.
             _instance = this;
 
-            if (Selections.currentSigns == null)
-            {
-                Selections.Setup();
-            }
-
-            // Load settings.
-            configurationFile = ConfigurationUtil.LoadConfiguration();
-
-            // Build lists of packs in relevant selection categories.
-            signPacks = new List<InternalPropPack>();
-            speedPacks = new List<InternalPropPack>();
-
-            // Add inbuilt vanilla packs.
-            signPacks.Add(Selections.defaultSignPack);
-            speedPacks.Add(Selections.defaultSpeedPack);
-
-            // Iterate through each prop pack loaded from the settings file.
-            foreach (PropPack propPack in configurationFile.propPacks)
-            {
-                // Create new package references.
-                InternalPropPack newSpeedPack = new InternalPropPack();
-                InternalPropPack newSignPack = new InternalPropPack();
-
-                newSpeedPack.category = (int)SignTypes.speed;
-                newSignPack.category = (int)SignTypes.general;
-
-                newSpeedPack.propPack = new PropPack();
-                newSignPack.propPack = new PropPack();
-                newSpeedPack.propPack.name = propPack.name;
-                newSignPack.propPack.name = propPack.name;
-                newSpeedPack.propPack.propReplacements = new List<PropReplacement>();
-                newSignPack.propPack.propReplacements = new List<PropReplacement>();
-
-                // Iterate through each replacement in the pack.
-                foreach (PropReplacement replacement in propPack.propReplacements)
-                {
-                    // Check that prop pack is subscribed on the workshop.
-                    int prefixIndex = replacement.replacementName.IndexOf(".");
-
-                    if (prefixIndex > 0)
-                    {
-                        string workshopPrefix = replacement.replacementName.Substring(0, prefixIndex);
-
-                        if (!string.IsNullOrEmpty(workshopPrefix))
-                        {
-                            if (PackageManager.GetPackage(workshopPrefix) == null)
-                            {
-                                Debugging.Message("workshop subscription " + workshopPrefix + " not found");
-                                continue;
-                            }
-                        }
-                    }
-
-                    // Sort into speed signs and other signs.
-                    switch (replacement.targetName)
-                    {
-                        case "30 Speed Limit":
-                        case "40 Speed Limit":
-                        case "50 Speed Limit":
-                        case "60 Speed Limit":
-                        case "100 Speed Limit":
-                            newSpeedPack.propPack.propReplacements.Add(replacement);
-                            break;
-                        default:
-                            newSignPack.propPack.propReplacements.Add(replacement);
-                            break;
-                    }
-                }
-
-                // Add generated speed sign pack to list if it has at least one sign in it.
-                if (newSpeedPack.propPack.propReplacements.Count > 0)
-                {
-                    speedPacks.Add(newSpeedPack);
-                }
-
-                // Add generated general sign pack to list if it has at least one sign in it.
-                if (newSignPack.propPack.propReplacements.Count > 0)
-                {
-                    signPacks.Add(newSignPack);
-                }
-            }
-            
             // Get root options panel.
             UIScrollablePanel optionsPanel = ((UIHelper)helper).self as UIScrollablePanel;
             optionsPanel.autoLayout = false;
@@ -162,7 +74,7 @@ namespace RoadSignReplacer
             speedPackSelection.selectedIndex = -1;
 
             // Populate the list.
-            speedPackSelection.rowsData = ToFastList(speedPacks);
+            speedPackSelection.rowsData = ToFastList(DataStore.speedPacks);
 
             // Set up panels.
             UILabel signLabel = optionsPanel.AddUIComponent<UILabel>();
@@ -189,7 +101,7 @@ namespace RoadSignReplacer
             signPackSelection.selectedIndex = -1;
 
             // Populate the list.
-            signPackSelection.rowsData = ToFastList(signPacks);
+            signPackSelection.rowsData = ToFastList(DataStore.signPacks);
 
             // Bottom panel for buttons.
             savePanel = optionsPanel.AddUIComponent<UISavePanel>();
@@ -273,7 +185,7 @@ namespace RoadSignReplacer
             // Apply general sign pack setting, if any.
             if (Settings.signPackName != null && Settings.signPackName != "Vanilla")
             {
-                selectedSignPack = signPacks.Find(pack => pack.propPack.name.Equals(Settings.signPackName));
+                selectedSignPack = DataStore.signPacks.Find(pack => pack.propPack.name.Equals(Settings.signPackName));
 
                 if (selectedSignPack == null)
                 {
@@ -288,7 +200,7 @@ namespace RoadSignReplacer
             // Apply speed sign pack setting, if any.
             if (Settings.speedPackName != null && Settings.speedPackName != "Vanilla")
             {
-                selectedSpeedPack = speedPacks.Find(pack => pack.propPack.name.Equals(Settings.speedPackName));
+                selectedSpeedPack = DataStore.speedPacks.Find(pack => pack.propPack.name.Equals(Settings.speedPackName));
 
                 if (selectedSpeedPack == null)
                 {

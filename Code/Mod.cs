@@ -17,13 +17,23 @@ namespace RoadSignReplacer
 
 
         /// <summary>
-        /// Called by the game when the mod options panel is setup.
+        /// Called by the game when the mod is enabled.
         /// </summary>
-        public void OnSettingsUI(UIHelperBase helper)
+        public void OnEnabled()
         {
             // Load settings file.
             SettingsUtils.LoadSettings();
 
+            // Initialise datastore.
+            DataStore.Setup();
+        }
+
+
+        /// <summary>
+        /// Called by the game when the mod options panel is setup.
+        /// </summary>
+        public void OnSettingsUI(UIHelperBase helper)
+        {
             // Create options panel.
             OptionsPanel optionsPanel = new OptionsPanel(helper);
         }
