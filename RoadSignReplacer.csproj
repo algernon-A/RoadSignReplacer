@@ -61,9 +61,9 @@
     <Compile Include="Code\Mod.cs" />
     <Compile Include="Code\Settings\ModSettings.cs" />
     <Compile Include="Code\Settings\OptionsPanel.cs" />
-    <Compile Include="Code\Settings\Selections.cs" />
+    <Compile Include="Code\SignReplacer\Selections.cs" />
     <Compile Include="Code\Configuration\ConfigurationFile.cs" />
-    <Compile Include="Code\Settings\SignReplacer.cs" />
+    <Compile Include="Code\SignReplacer\SignReplacer.cs" />
     <Compile Include="Code\Settings\SetttingsUtils.cs" />
     <Compile Include="Code\TranslationFramework\TranslationFramework.cs" />
     <Compile Include="Code\TranslationFramework\TranslationXML.cs" />
