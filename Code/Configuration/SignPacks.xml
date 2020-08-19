@@ -126,5 +126,19 @@
         <replacement target="Motorway Sign" replacement="1074496614.French Road Sign - C207_Data" rotation="0" />
       </propReplacements>
     </replacementpack>
+    <replacementpack name="Traffic Signs (Custom) by Ellysmere Haven">
+      <propReplacements>
+        <replacement target="30 Speed Limit" replacement="2013164837.30km/h Speed Limit_Data" rotation="0" />
+        <replacement target="40 Speed Limit" replacement="2013164837.40km/h Speed Limit_Data" rotation="0" />
+        <replacement target="50 Speed Limit" replacement="2013164837.50km/h Speed Limit_Data" rotation="0" />
+        <replacement target="60 Speed Limit" replacement="2013164837.60km/h Speed Limit_Data" rotation="0" />
+        <replacement target="100 Speed Limit" replacement="2013164837.100km/h Speed Limit_Data" rotation="0" />
+        <replacement target="Stop Sign" replacement="2013164837.Stop_Data" rotation="0" />
+        <replacement target="No Parking Sign" replacement="2013164837.No Parking_Data" rotation="0" />
+        <replacement target="No Right Turn Sign" replacement="2013164837.No Right Turn_Data" rotation="0" />
+        <replacement target="No Left Turn Sign" replacement="2013164837.No Left Turn_Data" rotation="0" />
+        <replacement target="Motorway Sign" replacement="2013164837.Motorway Road_Data" rotation="0" />
+      </propReplacements>
+    </replacementpack>
   </propPacks>
 </RoadSignReplacer>

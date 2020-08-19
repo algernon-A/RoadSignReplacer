@@ -1,4 +1,7 @@
-﻿Version 0.3
+﻿- Add support for Traffic Signs (Custom) by Ellysmere Haven
+
+
+Version 0.3
 
 - Add support for custom roads, starting with Macwelshman's UK Road Project
 - Add configurable translation framework
