@@ -140,5 +140,18 @@
         <replacement target="Motorway Sign" replacement="2013164837.Motorway Road_Data" rotation="0" />
       </propReplacements>
     </replacementpack>
+    <replacementpack name="Swedish road signs pack by SvenBerlin">
+      <propReplacements>
+        <replacement target="30 Speed Limit" replacement="2258591646.swedish road sign C31-3_Data" rotation="0" />
+        <replacement target="40 Speed Limit" replacement="2258591646.swedish road sign C31-4_Data" rotation="0" />
+        <replacement target="50 Speed Limit" replacement="2258591646.swedish road sign C31-5_Data" rotation="0" />
+        <replacement target="60 Speed Limit" replacement="2258591646.swedish road sign C31-6_Data" rotation="0" />
+        <replacement target="100 Speed Limit" replacement="2258591646.swedish road sign C31-10_Data" rotation="0" />
+        <replacement target="Stop Sign" replacement="2260057509.swedish road sign B2_Data" rotation="0" />
+        <replacement target="No Parking Sign" replacement="2260057509.swedish road sign C39_Data" rotation="0" />
+        <replacement target="No Right Turn Sign" replacement="2258591646.swedish road sign C25-2_Data" rotation="0" />
+        <replacement target="No Left Turn Sign" replacement="2258591646.swedish road sign C25-1_Data" rotation="0" />
+      </propReplacements>
+    </replacementpack>
   </propPacks>
 </RoadSignReplacer>

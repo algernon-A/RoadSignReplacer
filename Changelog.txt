@@ -1,4 +1,5 @@
-﻿- Add support for Traffic Signs (Custom) by Ellysmere Haven
+﻿- Add support for Swedish Road Signs by SvenBerlin
+- Add support for Traffic Signs (Custom) by Ellysmere Haven
 
 
 Version 0.3
