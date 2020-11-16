@@ -1,4 +1,5 @@
-﻿- Add support for Swedish Road Signs by SvenBerlin
+﻿- Add support for Canadian (Ontario) Road Signs Pack by Nochin98
+- Add support for Swedish Road Signs by SvenBerlin
 - Add support for Traffic Signs (Custom) by Ellysmere Haven
 
 

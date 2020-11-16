@@ -153,5 +153,19 @@
         <replacement target="No Left Turn Sign" replacement="2258591646.swedish road sign C25-1_Data" rotation="0" />
       </propReplacements>
     </replacementpack>
+    <replacementpack name="Canadian (Ontario) Road Signs Pack by Nochin98">
+      <propReplacements>
+        <replacement target="30 Speed Limit" replacement="2287634130.30 KM/HR MAX SIGN_Data" rotation="270" />
+        <replacement target="40 Speed Limit" replacement="2287634130.40 KM/HR MAX SIGN_Data" rotation="270" />
+        <replacement target="50 Speed Limit" replacement="2287634130.50 KM/HR MAX SIGN_Data" rotation="270" />
+        <replacement target="60 Speed Limit" replacement="2287634130.60 KM/HR MAX SIGN_Data" rotation="270" />
+        <replacement target="100 Speed Limit" replacement="2287634130.100 KM/HR MAX SIGN_Data" rotation="270" />
+        <replacement target="Stop Sign" replacement="2287634130.STOP SIGN_Data" rotation="270" />
+        <replacement target="No Parking Sign" replacement="2287634130.NO PARKING SIGN_Data" rotation="180" />
+        <replacement target="No Right Turn Sign" replacement="2287634130.NO RIGHT TURN SIGN_Data" rotation="270" />
+        <replacement target="No Left Turn Sign" replacement="2287634130.NO LEFT TURN SIGN_Data" rotation="270" />
+        <replacement target="Motorway Sign" replacement="2287634130.HIGHWAY ROUTE SIGN_Data" rotation="270" />
+      </propReplacements>
+    </replacementpack>
   </propPacks>
 </RoadSignReplacer>
