@@ -167,5 +167,11 @@
         <replacement target="Motorway Sign" replacement="2287634130.HIGHWAY ROUTE SIGN_Data" rotation="270" />
       </propReplacements>
     </replacementpack>
+    <replacementpack name="US CA Freeway Props by GhostRaiderMX">
+      <propReplacements>
+        <replacement target="Motorway Overroad Signs" replacement="2322292112.3L US CA I Highway Gantry Medium_Data" rotation="0" />
+        <replacement target="Motorway Sign" replacement="2322292540.US CA I Highway Sign Entrance_Data" rotation="0" />
+      </propReplacements>
+    </replacementpack>    
   </propPacks>
 </RoadSignReplacer>
