@@ -2,6 +2,7 @@
 using ColossalFramework.UI;
 using System;
 
+#pragma warning disable IDE1006 // Naming Styles
 
 namespace RoadSignReplacer
 {
@@ -9,7 +10,7 @@ namespace RoadSignReplacer
     /// From SamSamTS's work with Building Themes mod, via AJ3D's Ploppable RICO.
     /// Code and comments are unchanged.
     /// </summary>
-    public interface UIFastListRow
+    public interface IUIFastListRow
     {
         #region Methods to implement
         /// <summary>
@@ -77,7 +78,7 @@ namespace RoadSignReplacer
         #region Private members
         private UIPanel m_panel;
         private UIScrollbar m_scrollbar;
-        private FastList<UIFastListRow> m_rows;
+        private FastList<IUIFastListRow> m_rows;
         private FastList<object> m_rowsData;
 
         private Type m_rowType;
@@ -104,7 +105,7 @@ namespace RoadSignReplacer
         /// <param name="parent"></param>
         /// <returns></returns>
         public static UIFastList Create<T>(UIComponent parent)
-            where T : UIPanel, UIFastListRow
+            where T : UIPanel, IUIFastListRow
         {
             UIFastList list = parent.AddUIComponent<UIFastList>();
             list.m_rowType = typeof(T);
@@ -460,7 +461,7 @@ namespace RoadSignReplacer
 
         #region Private methods
 
-        protected void OnRowClicked(UIComponent component, UIMouseEventParameter p)
+        protected void OnRowClicked(UIComponent component, UIMouseEventParameter _)
         {
             if (selectOnMouseEnter) m_lastMouseEnter = component;
 
@@ -483,7 +484,7 @@ namespace RoadSignReplacer
 
             if (m_rows == null)
             {
-                m_rows = new FastList<UIFastListRow>();
+                m_rows = new FastList<IUIFastListRow>();
                 m_rows.SetCapacity(nbRows);
             }
 
@@ -492,7 +493,7 @@ namespace RoadSignReplacer
                 // Adding missing rows
                 for (int i = m_rows.m_size; i < nbRows; i++)
                 {
-                    m_rows.Add(m_panel.AddUIComponent(m_rowType) as UIFastListRow);
+                    m_rows.Add(m_panel.AddUIComponent(m_rowType) as IUIFastListRow);
                     if (m_canSelect && !selectOnMouseEnter) m_rows[i].eventClick += OnRowClicked;
                     else if (m_canSelect) m_rows[i].eventMouseEnter += OnRowClicked;
                 }
@@ -528,7 +529,7 @@ namespace RoadSignReplacer
                 m_scrollbar.isVisible = isVisible;
             }
 
-            float H = m_rowHeight * m_rowsData.m_size;
+            //float H = m_rowHeight * m_rowsData.m_size;
             float scrollSize = height * height / (m_rowHeight * m_rowsData.m_size);
             float amount = stepSize * height / (m_rowHeight * m_rowsData.m_size);
 
@@ -612,3 +613,5 @@ namespace RoadSignReplacer
         #endregion
     }
 }
+
+#pragma warning restore IDE1006 // Naming Styles
