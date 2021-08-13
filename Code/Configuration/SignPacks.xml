@@ -172,6 +172,20 @@
         <replacement target="Motorway Overroad Signs" replacement="2322292112.3L US CA I Highway Gantry Medium_Data" rotation="0" />
         <replacement target="Motorway Sign" replacement="2322292540.US CA I Highway Sign Entrance_Data" rotation="0" />
       </propReplacements>
-    </replacementpack>    
+    </replacementpack>
+    <replacementpack name="Russian roadsigns: Dedicated pack by Captain Toof">
+      <propReplacements>
+        <replacement target="30 Speed Limit" replacement="2487972974.RU_дор.знак_СкоростьДо30_Data" rotation="270" />
+        <replacement target="40 Speed Limit" replacement="2487972974.RU_дор.знак_СкоростьДо40_Data" rotation="270" />
+        <replacement target="50 Speed Limit" replacement="2457985841.eligios_Sign_prohibitory_003_Data" rotation="270" />
+        <replacement target="60 Speed Limit" replacement="2487972974.RU_дор.знак_СкоростьДо60_Data" rotation="270" />
+        <replacement target="100 Speed Limit" replacement="2508617855.RU_дор.знак_СкоростьДо100_Data" rotation="270" />
+        <replacement target="Stop Sign" replacement="2508617855.RU_дор.знак_Стоп-8угольный_Data" rotation="270" />
+        <replacement target="No Parking Sign" replacement="2508617855.RU_дор.знак_ПарковкаЗапрещена_Data " rotation="180" /> <!--actually should be blue slashed too-->
+        <replacement target="No Right Turn Sign" replacement="2487972974.RU_дор.знак_НаправоЗапрещено_Data" rotation="270" />
+        <replacement target="No Left Turn Sign" replacement="2487972974.RU_дор.знак_НалевоЗапрещено_Data" rotation="270" />
+        <!-- <replacement target="Motorway Sign" replacement="" rotation="270" /> not created yet-->
+      </propReplacements>
+    </replacementpack>
   </propPacks>
 </RoadSignReplacer>
