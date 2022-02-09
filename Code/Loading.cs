@@ -32,6 +32,14 @@ namespace RoadSignReplacer
 
             // Load and apply configuration file settings.
             OptionsPanel.Instance.LoadConfiguration();
+            /*
+            for (uint i = 0; i< PrefabCollection<PropInfo>.LoadedCount(); ++i)
+            {
+                if (PrefabCollection<PropInfo>.GetLoaded(i) is PropInfo prop)
+                {
+                    Debugging.Message(prop.name ?? "null");
+                }
+            }*/
 
             // Create dictionary if it doesn't already exist.
             if (Selections.currentSigns == null)

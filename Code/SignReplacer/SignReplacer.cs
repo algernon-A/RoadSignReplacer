@@ -106,11 +106,6 @@ namespace RoadSignReplacer
                 {
                     Selections.currentSigns[replacement.targetName] = replacement;
                 }
-
-                // Save to configuration file.
-                //SettingsFile settingsFile = Configuration<SettingsFile>.Load();
-                //settingsFile.speedPackName = speedSelection.name;
-                //Configuration<SettingsFile>.Save();
             }
 
             if (replacingSigns)
@@ -123,11 +118,6 @@ namespace RoadSignReplacer
                 {
                     Selections.currentSigns[replacement.targetName] = replacement;
                 }
-
-                // Save to configuration file.
-                //SettingsFile settingsFile = Configuration<SettingsFile>.Load();
-                //settingsFile.signPackName = signSelection.name;
-                //Configuration<SettingsFile>.Save();
             }
 
         }

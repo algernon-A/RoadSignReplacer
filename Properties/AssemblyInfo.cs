@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Road Sign Replacer")]
-[assembly: AssemblyCopyright("Copyright ©  2020 algernon")]
+[assembly: AssemblyCopyright("Copyright © 2020-22 algernon")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
