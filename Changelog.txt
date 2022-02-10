@@ -1,10 +1,17 @@
-﻿Version 0.4
+﻿Version 0.4.2
 
-- Add support for Canadian (Ontario) Road Signs Pack by Nochin98
-- Add support for Swedish Road Signs by SvenBerlin
+- Add support for Hong Kong Traffic Signs [香港交通標誌] by yauaa
+
+
 Version 0.4.1
 
 - Add support for BIG Urban roadsigns
+
+
+Version 0.4
+
+- Add support for Canadian (Ontario) Road Signs Pack by Nochin98
+- Add support for Swedish Road Signs by SvenBerlin
 
 
 Version 0.4

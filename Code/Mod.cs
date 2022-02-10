@@ -10,7 +10,7 @@ namespace RoadSignReplacer
     {
         public static string ModName => "Road Sign Replacer";
 
-        public static string Version => "0.4.1";
+        public static string Version => "0.4.2";
         public string Name => ModName + " " + Version;
 
         public string Description => Translations.Translate("RSR_DESC");
