@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Language UniqueName="ja" ReadableName="日本語">
+  <Translations>
+    <Translation ID="RSR_DESC" String="道路標識を置換します (開発中:フィードバックや提案を歓迎)" />
+    <Translation ID="TRN_CHOICE" String="言語の設定" />
+    <Translation ID="TRN_SYS" String="ゲームの言語を使用" />
+  </Translations>
+</Language>
